@@ -128,6 +128,8 @@
         initialize(&trie);
 
         // Construct trie
+        cout<<"\nPlease ensure that you have added your files in the toindex folder as well as the main folder";
+
 
         DIR *dpdf;
     struct dirent *epdf;
@@ -159,16 +161,20 @@
     }
 
     */
-    for(k=0;k<3;k++)
+    int num;
+    cout<<"\nFiles have been indexed. Now enter the number of files to be searched from. ";
+    cin>>num;
+    for(k=0;k<num;k++)
     {
         //infile.open(v[k].c_str());
         //infile.open(v[k]);
-        if(k==0)
-        infile.open("ff.txt");
-         if(k==1)
-        infile.open("hh.txt");
-         if(k==2)
-        infile.open("gg.txt");
+
+        char filen[30];
+        cout<<"\n\nEnter file name int the format filename.txt : ";
+        cin>>filen;
+        infile.open(filen);
+
+
 
     cout<<"\n now indexing ... "<<k;
         //infile.open();
@@ -229,3 +235,4 @@ int main()
         a.search_for();
         return 0;
     }
+
