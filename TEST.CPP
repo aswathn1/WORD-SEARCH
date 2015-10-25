@@ -1,4 +1,4 @@
-    #include <stdio.h>
+   #include <stdio.h>
     #include <stdlib.h>
     #include <string.h>
     #include <iostream>
@@ -26,7 +26,7 @@
     trie_node_t *root;
     int count;
     //int occ[4];
-    };
+    }; 
      trie_t trie;
     // Returns new trie node (initialized to NULLs)
     class search_word
@@ -45,7 +45,9 @@
 
         for(i = 0; i < ALPHABET_SIZE; i++)
         {
+        
         pNode->children[i] = NULL;
+        
         }
         }
 
@@ -107,8 +109,9 @@
     }
 
     trav = trav->children[index];
+    
     }
-
+	cout<<"Word is found at position "<<level;
     //return (0 != trav && trav->value);
     if(trav->value) return 1;
     else return 0;
