@@ -183,6 +183,8 @@
     while(!infile.eof())
     {
         infile>>word;
+        if(infile.eof())
+            break;
         //j=hash(word,51);
         cout<<"\n word is "<<word;
         insert(&trie,word,k);
